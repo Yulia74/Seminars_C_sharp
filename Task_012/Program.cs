@@ -4,7 +4,7 @@
 // Например: 34, 5 -> не кратно, остаток 4 
 //           16, 4 -> кратно
 
-Console.WriteLine("Enter Number1");
+Console.WriteLine("Enter number1");
 
 int number1 = int.Parse(Console.ReadLine());
 
