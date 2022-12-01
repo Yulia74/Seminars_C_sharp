@@ -22,11 +22,5 @@ if(!isParsed1)
     Console.WriteLine("what you entered is not a number");
     return;
 }
-if(number2 == number1 * number1 || number1 == number2 * number2)
-{
-     Console.WriteLine("One of the entered numbers is the square of the other");
-}
-else
-{
-     Console.WriteLine("One of the entered numbers is not the square of the other");  
-}
+if(number2 == number1 * number1 || number1 == number2 * number2) Console.WriteLine("One of the entered numbers is the square of the other");
+else Console.WriteLine("One of the entered numbers is not the square of the other");  
