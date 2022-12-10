@@ -8,9 +8,9 @@ int[] array = GenerateArray(-100,100,123);          //7  вызываем мет
                                                     //   получаем здесь массив
 PrintArray(array);                                  //10  вызываем метод по печатанию заданного массива
 
-int count = FindNumberOfElements(array);            //12 вызываем метод, нахождения условия задачи
+int count = FindNumberOfElements(array, 10, 99);            //12 вызываем метод, нахождения условия задачи
 
-Console.WriteLine($"The number of array elements in the interval [10,99] = {count}"); //13 выводим на экран 
+Console.WriteLine($"The number of array elements in the in the specified interval = {count}"); //13 выводим на экран 
                                                                                       //    результат
 
 
@@ -31,14 +31,14 @@ void PrintArray(int[] array)                        //8 объявляем ме�
      Console.WriteLine(@"[{0}]", string.Join(",", array)); //9 задаем конструкцию, как это будет выглядеть на экране
 }    
 
-int FindNumberOfElements(int[] array)               //11 объявляем метод, нахождение условия задачи
+int FindNumberOfElements(int[] array, int min, int max)               //11 объявляем метод, нахождение условия задачи
 {
     int count = 0;
     for (var i = 0; i < array.Length; i++)
     {
-        if(array[i] > 10 && array[i] < 100)
+        if(array[i] >= min && array[i] <= max)
         {
-            count = count + 1;
+            count++ ;
         }
     }
     return count;
