@@ -18,10 +18,10 @@ Console.WriteLine(result);
 
 
 
-
+/*
 bool TriangleSidesCheck(int a, int b, int c)
 {
-    if(a + b <= c || a + c <= b || b + c <= a)
+    if(a + b >= c || a + c >= b || b + c >= a)
     {
         return false;
     }
@@ -30,4 +30,9 @@ bool TriangleSidesCheck(int a, int b, int c)
         return true;
     }
 }
-
+*/
+bool TriangleSidesCheck(int a, int b, int c)
+{
+    return (a + b >= c || a + c >= b || b + c >= a); // усовершествованный вариант
+}                                                    // выражение в скобках сразу проверяем
+                                                     // на истиннность как переменную
