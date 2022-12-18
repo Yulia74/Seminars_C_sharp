@@ -33,7 +33,7 @@ void Print2DArray(int[,] array)
     {
         for (var j = 0; j < array.GetLength(1); j++)
         {
-             Console.Write(array[i, j] + " ");
+            Console.Write(array[i, j] + " ");
         }
         Console.WriteLine();
     }
@@ -41,15 +41,14 @@ void Print2DArray(int[,] array)
 
 void GetSumElementsOnMainDiagonal(int[,] array)
 {
+
     int sum = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0) && i < array.GetLength(1); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (i == j)
-                sum = sum + array[i,j];
-        }
-    }
+        sum = sum + array[i, i];   // поскольку в данном случае матрица будет квадратной,
+    }                              // то i = j
     Console.WriteLine($"Cумма элементов, находящихся на главной диагонали равна {sum}");
 }
+
+
 
